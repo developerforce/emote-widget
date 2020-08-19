@@ -1,8 +1,12 @@
+$widget-color: #13B7D3;
+$widget-side: right;
+
 .button {
-  text-align: center;
-  display: inline-block;
 }
 
 button {
+  height: 50px;
   font-size: 2rem;
+  border: 0;
+  background: lighten($widget-color, 40);
 }

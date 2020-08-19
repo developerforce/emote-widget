@@ -1,8 +1,6 @@
-.button {
-  text-align: center;
-  display: inline-block;
-}
-
 button {
-  font-size: 2rem;
+    height: 50px;
+    font-size: 2rem;
+    border: 0;
+    background: #b9eff9;
 }
