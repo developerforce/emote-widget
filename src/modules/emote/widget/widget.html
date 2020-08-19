@@ -1,15 +1,18 @@
 <template>
     <div class="container">
-        <div class="buttons">
-            <template for:each={buttonsData} for:item="buttonData">
-                <emote-button
-                    emoji={buttonData.emoji}
-                    name={buttonData.name}
-                    talk-id={talkId}
-                    key={buttonData.name}
-                    count={buttonData.count}
-                ></emote-button>
-            </template>
+        <div class="speech-bubble">
+            <div class="buttons">
+                <template for:each={buttonsData} for:item="buttonData">
+                    <emote-button
+                        emoji={buttonData.emoji}
+                        name={buttonData.name}
+                        talk-id={talkId}
+                        key={buttonData.name}
+                        count={buttonData.count}
+                    ></emote-button>
+                </template>
+            </div>
         </div>
+        <div class="activator">🍔</div>
     </div>
 </template>
