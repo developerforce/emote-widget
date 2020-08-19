@@ -1,4 +1,4 @@
-$widget-color: #13B7D3;
+$widget-color: #13b7d3;
 $widget-side: right;
 
 .container {
@@ -18,8 +18,13 @@ $widget-side: right;
 }
 
 .speech-bubble {
-    background-image: linear-gradient(140deg, #FCFCFC 0%, #F8F8F8 91%, #F8F8F8 91%);
-    box-shadow: 0 0 50px 0 rgba(10,6,27,0.22);
+    background-image: linear-gradient(
+        140deg,
+        #fcfcfc 0%,
+        #f8f8f8 91%,
+        #f8f8f8 91%
+    );
+    box-shadow: 0 0 50px 0 rgba(10, 6, 27, 0.22);
     flex: 1;
     width: 100%;
     border-radius: 15px;
@@ -36,7 +41,7 @@ $widget-side: right;
         height: 0px;
         border-left: 10px solid transparent;
         border-right: 10px solid transparent;
-        border-top: 10px solid #F8F8F8;
+        border-top: 10px solid #f8f8f8;
     }
 }
 

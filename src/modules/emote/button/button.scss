@@ -1,12 +1,12 @@
-$widget-color: #13B7D3;
+$widget-color: #13b7d3;
 $widget-side: right;
 
 .button {
 }
 
 button {
-  height: 50px;
-  font-size: 2rem;
-  border: 0;
-  background: lighten($widget-color, 40);
+    height: 50px;
+    font-size: 2rem;
+    border: 0;
+    background: lighten($widget-color, 40);
 }

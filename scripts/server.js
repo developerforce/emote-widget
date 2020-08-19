@@ -1,3 +1,5 @@
+/* eslint-env node */
+
 // Simple Express server setup to serve the build output
 const compression = require('compression');
 const helmet = require('helmet');
