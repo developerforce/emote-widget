@@ -26,7 +26,7 @@
     content: '';
     position: absolute;
     bottom: -10px;
-    right: 20px;
+    right: 30px;
     width: 0px;
     height: 0px;
     border-left: 10px solid transparent;
@@ -36,4 +36,15 @@
 
 .buttons {
     text-align: center;
+}
+
+.activator {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #13b7d3;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
