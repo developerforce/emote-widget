@@ -1,6 +1,5 @@
 import { LightningElement, api, track } from 'lwc';
 import { config } from '../../../../config.js';
-
 const { apiDomain, ssePath, emotePath } = config;
 
 export default class Widget extends LightningElement {

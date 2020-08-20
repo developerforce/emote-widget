@@ -7,9 +7,12 @@
     "dependencies": {
         "compression": "^1.7.4",
         "express": "^4.17.1",
+        "floating.js": "^2.7.4",
         "helmet": "^3.23.3"
     },
     "devDependencies": {
+        "@rollup/plugin-commonjs": "^15.0.0",
+        "@rollup/plugin-node-resolve": "^9.0.0",
         "eslint": "^7.5.0",
         "globby": "^11.0.1",
         "husky": "^4.2.5",
@@ -56,7 +59,7 @@
         "test:unit:debug": "lwc-services test:unit --debug",
         "test:unit:watch": "lwc-services test:unit --watch",
         "watch": "run-p watch:*",
-        "watch:lwc": "lwc-services watch -b rollup",
+        "watch:lwc": "rollup --config ./scripts/rollup.config.js --watch",
         "watch:css": "nodemon --exec 'npm run build:css' --watch src -e scss"
     }
 }
