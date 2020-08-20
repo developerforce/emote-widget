@@ -1,6 +1,7 @@
 <template>
     <div class="container">
         <div class="speech-bubble">
+            <h1>Share how you feel!</h1>
             <div class="buttons">
                 <template for:each={buttonsData} for:item="buttonData">
                     <emote-button
@@ -12,7 +13,8 @@
                     ></emote-button>
                 </template>
             </div>
+            <a href="#" class="text-link">options</a>
         </div>
-        <div class="activator">🍔</div>
+        <div class="activator"></div>
     </div>
 </template>
