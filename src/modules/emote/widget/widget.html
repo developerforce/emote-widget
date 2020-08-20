@@ -1,7 +1,7 @@
 <template>
     <div class="container">
-        <template if:true={showWidget}>
-            <div class="speech-bubble">
+        <div class="speech-bubble">
+            <template if:true={showWidget}>
                 <h1>Share how you feel!</h1>
                 <div class="buttons">
                     <template for:each={buttonsData} for:item="buttonData">
@@ -15,26 +15,28 @@
                     </template>
                 </div>
                 <a href="#" class="text-link" onclick={openOptions}>options</a>
-            </div>
-        </template>
+            </template>
 
-        <template if:true={showOptions}>
-            <h1>Options</h1>
-            <form>
-                <label for="animations">Animations</label>
-                <select id="animations">
-                    <option>On</option>
-                    <option>Low</option>
-                    <option>Off</option>
-                </select>
-                <div class="form-buttons">
-                    <a href="#" class="text-link" onclick={closeOptions}
-                        >Cancel</a
-                    >
-                    <a href="#" class="text-link" onclick={saveOptions}>Save</a>
-                </div>
-            </form>
-        </template>
+            <template if:true={showOptions}>
+                <h1>Options</h1>
+                <form>
+                    <label for="animations">Animations</label>
+                    <select id="animations">
+                        <option>On</option>
+                        <option>Low</option>
+                        <option>Off</option>
+                    </select>
+                    <div class="form-buttons">
+                        <a href="#" class="text-link" onclick={closeOptions}
+                            >Cancel</a
+                        >
+                        <a href="#" class="text-link" onclick={saveOptions}
+                            >Save</a
+                        >
+                    </div>
+                </form>
+            </template>
+        </div>
         <div class="activator" onclick={toggleWidget}></div>
     </div>
 </template>
