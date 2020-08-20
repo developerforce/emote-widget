@@ -1,15 +1,38 @@
 <template>
     <div class="container">
-        <div class="buttons">
-            <template for:each={buttonsData} for:item="buttonData">
-                <emote-button
-                    emoji={buttonData.emoji}
-                    name={buttonData.name}
-                    talk-id={talkId}
-                    key={buttonData.name}
-                    count={buttonData.count}
-                ></emote-button>
-            </template>
+        <div class="speech-bubble">
+            <h1>Share how you feel!</h1>
+            <div class="buttons">
+                <template for:each={buttonsData} for:item="buttonData">
+                    <emote-button
+                        emoji={buttonData.emoji}
+                        name={buttonData.name}
+                        talk-id={talkId}
+                        key={buttonData.name}
+                        count={buttonData.count}
+                    ></emote-button>
+                </template>
+            </div>
+            <a href="#" class="text-link">options</a>
+
+            <!-- options component
+
+            <h1>Options</h1>
+            <form>
+                <label for="animations">Animations</label>
+                <select id="animations">
+                    <option>On</option>
+                    <option>Low</option>
+                    <option>Off</option>
+                </select>
+                <div class="form-buttons">
+                    <a href="#" class="text-link">Cancel</a>
+                    <a href="#" class="text-link">Save</a>
+                </div>
+            </form>
+            
+            end options component -->
         </div>
+        <div class="activator"></div>
     </div>
 </template>
