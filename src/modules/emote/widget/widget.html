@@ -1,22 +1,24 @@
 <template>
     <div class="container">
-        <div class="speech-bubble">
-            <h1>Share how you feel!</h1>
-            <div class="buttons">
-                <template for:each={buttonsData} for:item="buttonData">
-                    <emote-button
-                        emoji={buttonData.emoji}
-                        name={buttonData.name}
-                        talk-id={talkId}
-                        key={buttonData.name}
-                        count={buttonData.count}
-                    ></emote-button>
-                </template>
+        <template if:true={showWidget}>
+            <div class="speech-bubble">
+                <h1>Share how you feel!</h1>
+                <div class="buttons">
+                    <template for:each={buttonsData} for:item="buttonData">
+                        <emote-button
+                            emoji={buttonData.emoji}
+                            name={buttonData.name}
+                            talk-id={talkId}
+                            key={buttonData.name}
+                            count={buttonData.count}
+                        ></emote-button>
+                    </template>
+                </div>
+                <a href="#" class="text-link" onclick={openOptions}>options</a>
             </div>
-            <a href="#" class="text-link">options</a>
+        </template>
 
-            <!-- options component
-
+        <template if:true={showOptions}>
             <h1>Options</h1>
             <form>
                 <label for="animations">Animations</label>
@@ -26,13 +28,13 @@
                     <option>Off</option>
                 </select>
                 <div class="form-buttons">
-                    <a href="#" class="text-link">Cancel</a>
-                    <a href="#" class="text-link">Save</a>
+                    <a href="#" class="text-link" onclick={closeOptions}
+                        >Cancel</a
+                    >
+                    <a href="#" class="text-link" onclick={saveOptions}>Save</a>
                 </div>
             </form>
-            
-            end options component -->
-        </div>
-        <div class="activator"></div>
+        </template>
+        <div class="activator" onclick={toggleWidget}></div>
     </div>
 </template>

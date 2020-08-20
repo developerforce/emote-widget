@@ -8,6 +8,8 @@ export default class Widget extends LightningElement {
     eventList;
     intervalId;
     talk;
+    showWidget = true;
+    showOptions = false;
 
     COUNT_REFRESH_INTERVAL = 5000;
 
@@ -116,5 +118,29 @@ export default class Widget extends LightningElement {
                 button.count = 0;
             }
         });
+    }
+
+    openOptions() {
+        this.showOptions = true;
+        this.showWidget = false;
+    }
+
+    closeOptions() {
+        this.showOptions = false;
+        this.showWidget = true;
+    }
+
+    saveOptions() {
+        this.closeOptions();
+    }
+
+    toggleWidget() {
+        if (this.showOptions) {
+            this.showWidget = false;
+            this.showOptions = false;
+            return;
+        }
+
+        this.showWidget = !this.showWidget;
     }
 }
