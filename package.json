@@ -49,7 +49,7 @@
         "build": "run-s build:css 'build:lwc -- -m production'",
         "build:development": "run-s build:css build:lwc",
         "build:css": "node scripts/sass.js",
-        "build:lwc": "lwc-services build -b rollup",
+        "build:lwc": "rollup --config ./scripts/rollup.config.js",
         "lint": "eslint ./src/**/*.js ./scripts/**/*.js",
         "prettier": "prettier --write \"**/*.{scss,css,html,js,json,md,ts,yaml,yml}\"",
         "prettier:verify": "prettier --list-different \"**/*.{scss,css,html,js,json,md,ts,yaml,yml}\"",
