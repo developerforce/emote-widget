@@ -24,7 +24,6 @@ export default class Animation extends LightningElement {
     renderedCallback() {
         this.canvasEl = this.template.querySelector('.animation-canvas');
         this.setCanvasSize();
-        this.buttonEl = this.template.querySelector('#button');
         this.ctx = this.canvasEl.getContext('2d');
         this.render = anime({
             duration: Infinity,
