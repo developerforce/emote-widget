@@ -21,8 +21,6 @@ const renderParticule = (anim) => {
 };
 
 export default class Animation extends LightningElement {
-    @api buttonsData = [];
-
     renderedCallback() {
         this.canvasEl = this.template.querySelector('.animation-canvas');
         this.setCanvasSize();
