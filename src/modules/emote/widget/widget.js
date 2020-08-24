@@ -11,6 +11,8 @@ export default class Widget extends LightningElement {
     talk;
     showWidget = true;
     showOptions = false;
+    showAnimations = true;
+    selectedOption = true;
 
     COUNT_REFRESH_INTERVAL = 5000;
 
@@ -43,6 +45,7 @@ export default class Widget extends LightningElement {
         }
     ];
 
+    // Start animation component
     renderedCallback() {
         if (this.animation) return;
 
@@ -99,7 +102,11 @@ export default class Widget extends LightningElement {
 
     // For each button, increment its count if its name matches the string in the event
     incrementButtonCount(event) {
-        this.animation.fireAnimation(event.data);
+        // If animations are enabled, trigger an animation
+        if (this.showAnimations) {
+            this.animation.fireAnimation(event.data);
+        }
+
         this.buttonsData.forEach((button) => {
             if (button.name === event.data) {
                 button.count = parseInt(button.count, 10) + 1;
@@ -130,20 +137,35 @@ export default class Widget extends LightningElement {
         });
     }
 
+    // Control bubble visibility
+    get showBubble() {
+        return this.showWidget || this.showOptions;
+    }
+
+    // Open options dialog
     openOptions() {
         this.showOptions = true;
         this.showWidget = false;
     }
 
+    // Close options dialog
     closeOptions() {
         this.showOptions = false;
         this.showWidget = true;
     }
 
+    // Save the selected option to enable or disable animations
     saveOptions() {
+        this.showAnimations = this.selectedOption;
         this.closeOptions();
     }
 
+    // Select a configuration option to enable or disable animations
+    selectOption(event) {
+        this.selectedOption = event.target.value === 'true';
+    }
+
+    // Toggle widget visibility
     toggleWidget() {
         if (this.showOptions) {
             this.showWidget = false;
