@@ -1,5 +1,19 @@
 # Emote Widget
 
+To emote | əˈmōt | is to display emotions openly, especially while acting. But the word also has a meaning in internet history. The original internet chat tool, IRC, provided a `/me` command, which allowed IRC channel participants to share emotion.
+
+I would type `/me jumps for joy` and all IRC channel participants would see
+
+```
+* friendlybug80 jumps for joy
+```
+
+The 3rd person phrase `* friendlybug75 jumps for joy` is referred to as an emote.
+
+**tl;dr The emote widget (and its associated [server](https://github.com/fostive/emote-server)) allows virtual event attendees watching the event stream to share their emotion with other attendees and the presenter in real time. It's a higher fidelity, virtual-only version of clapping.**
+
+## How to use it
+
 This project generates the JavaScript you will include on the page into which you want to embed the widget.
 
 1. Deploy the server at https://github.com/fostive/emote-server.
