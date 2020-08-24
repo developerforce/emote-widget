@@ -13,6 +13,7 @@ export default class Widget extends LightningElement {
     showOptions = false;
     showAnimations = true;
     selectedOption = true;
+    animation;
 
     COUNT_REFRESH_INTERVAL = 5000;
 
