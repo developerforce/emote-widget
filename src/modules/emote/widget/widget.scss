@@ -131,7 +131,7 @@ select {
 .animation-canvas {
     position: absolute;
     background: transparent;
-    height: 300px;
+    height: calc(100vh - 30%);
     width: calc(100%  + 4em);
     bottom: 30%;
     right: -2em;
