@@ -25,7 +25,7 @@ This project generates the JavaScript you will include on the page into which yo
     <!-- main.js can be found in the dist folder in this project -->
     ```
 
-1. Add the `<emote-widget` HTML element within the `<body>` of the page. It doesn't matter where within the body you put it.
+1. Add the `<emote-widget>` HTML element within the `<body>` of the page. It doesn't matter where within the body you put it. It will be absolutely positioned using CSS.
 
     `<emote-widget talk-id="mytalk" position="bottom-right"></emote-widget>`
 
@@ -41,12 +41,12 @@ This project generates the JavaScript you will include on the page into which yo
     }
     ```
 
-1. Write some JavaScript to update the `talk-id` attribute's value when the talk changes. This will reset the counters to zero and record future clicks toward the new `talk-id` value. The `talk-id` value can be any string, but make sure it's unique for each "segment" (e.g. talk, panel discussion) of your event for which you want to uniquely capture emote events. Something like the following can be used, but you'll have to implement a way to invoke the function when the talk changes.
+1. Write some JavaScript to update the `talk-id` attribute's value when the talk changes. This will reset the counters to zero and record future clicks toward the new `talk-id` value. The `talk-id` value can be any string, but make sure it's unique for each "segment" (e.g. talk, panel discussion, keynote, etc) of your event for which you want to uniquely capture emote events. Something like the following can be used, but you'll have to implement a way to invoke the function when the talk changes.
 
     ```javascript
     updatTalkId(talkId) {
         const widget = document.querySelector('emote-widget');
-        widget.setAttribute('talk-id', <NEW_TALK_ID>);
+        widget.setAttribute('talk-id', '<NEW_TALK_ID>');
     }
     ```
 
@@ -62,10 +62,10 @@ This project generates the JavaScript you will include on the page into which yo
 
 ## TODO
 
-- [ ] Make widget position fixed on page - &yet
-- [ ] Make widget position configurable - &yet
-- [ ] Add emoji animation on click and on receiving an event - &yet
-- [ ] Apply styling to widget, buttons, counts, etc. - &yet
+- [x] Make widget position fixed on page - &yet
+- [x] Make widget position configurable - &yet
+- [x] Add emoji animation on click and on receiving an event - &yet
+- [x] Apply styling to widget, buttons, counts, etc. - &yet
 - [ ] Consider incrementing displayed count **on click** instead of waiting for SSE. Network delay may delay count increment after a click and confuse the user -- they will click and not see the number increment right away.
 - [ ] Determine a better way to make widget JS available to event organizer. Right now they have to copy the `dist/main.js` file to their event website and serve it from that website.
 - [ ] Add tests for components
