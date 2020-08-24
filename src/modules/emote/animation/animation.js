@@ -1,4 +1,5 @@
 import anime from 'animejs';
+import { debounce } from 'throttle-debounce';
 
 const emojiUrlLookup = {
     celebrate:
@@ -37,6 +38,7 @@ export default class Animation {
     ctx;
     render;
     images = {};
+    animate;
 
     constructor(elem) {
         this.canvasEl = elem;
@@ -109,7 +111,14 @@ export default class Animation {
 
     fireAnimation(name) {
         const img = this.loadImage(name);
-        this.render.play();
-        this.animateParticules(img);
+        if (this.animate) {
+            this.animate(img);
+        } else {
+            this.animate = debounce(10, (image) => {
+                this.render.play();
+                this.animateParticules(image);
+            });
+            this.animate(img);
+        }
     }
 }
