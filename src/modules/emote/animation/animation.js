@@ -20,15 +20,6 @@ const calculateAlpha = (yCurrent, yStart, yEnd) => {
     return alpha < 0 ? 0 : alpha;
 };
 
-const setParticuleDirection = (p) => {
-    var angle = 1.62;
-    var radius = -100;
-    return {
-        x: p.x + radius * Math.cos(angle),
-        y: p.y + radius * Math.sin(angle)
-    };
-};
-
 const renderParticule = (anim) => {
     anim.animatables.forEach((i) => i.target.draw());
 };
@@ -69,21 +60,32 @@ export default class Animation {
     }
 
     setCanvasSize() {
-        const rect = this.canvasEl.getBoundingClientRect();
-        this.canvasEl.width = rect.width;
-        this.canvasEl.height = rect.height;
-        this.canvasEl.getContext('2d').scale(2, 2);
+        this.canvasRect = this.canvasEl.getBoundingClientRect();
+        this.canvasEl.width = this.canvasRect.width;
+        this.canvasEl.height = this.canvasRect.height;
+        this.canvasEl.getContext('2d').scale(1, 1);
+    }
+
+    setParticuleDirection(p) {
+        var angle = 1.55;
+        var radius = -this.canvasRect.height;
+        return {
+            x: p.x + radius * Math.cos(angle),
+            y: p.y + radius * Math.sin(angle)
+        };
     }
 
     createParticule(img) {
         const p = {};
-        const x = anime.random(15, 25);
-        const y = anime.random(100, 120);
+        const x = anime.random(30, 60);
+        const yBase = this.canvasRect.height - 78;
+        const yWiggle = 30;
+        const y = anime.random(yBase - yWiggle / 2, yBase + yWiggle / 2);
         p.startPos = { x, y };
         p.x = x;
         p.y = y;
-        p.radius = anime.random(16, 24);
-        p.endPos = setParticuleDirection(p);
+        p.radius = anime.random(24, 48);
+        p.endPos = this.setParticuleDirection(p);
         p.draw = () => {
             this.ctx.globalAlpha = calculateAlpha(
                 +p.y,
@@ -102,8 +104,8 @@ export default class Animation {
             targets: particules,
             x: (p) => p.endPos.x,
             y: (p) => p.endPos.y,
-            radius: anime.random(5, 30),
-            duration: anime.random(3000, 5000),
+            radius: anime.random(10, 80),
+            duration: anime.random(12000, 15000),
             easing: 'easeOutExpo',
             update: renderParticule
         });
