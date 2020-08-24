@@ -32,7 +32,8 @@ This project generates the JavaScript you will include on the page into which yo
     1. The `talk-id` value `mytalk` is a unique string identifier for the current talk. You'll need to update this when the talk changes. See the next step for more details.
     1. Colors, fonts, and positioning can be configured in `widget.scss`
     1. Set `widget-side` to `right` or `left` in `widget.scss`
-    2. Add absolute positioning to your site's CSS to adjust were it appears.
+    1. Add absolute positioning to your site's CSS to adjust were it appears.
+
     ```
     emote-widget {
         position: absolute;
@@ -50,6 +51,17 @@ This project generates the JavaScript you will include on the page into which yo
     }
     ```
 
+1. If you need to add a hook for every emote received you can pass a callback to the `onEmote` method on the emote widget.
+
+    ```javascript
+    const widget = document.querySelector('emote-widget');
+    widget.onEmote((event) => {
+        if (event.data === 'smile') {
+            // do something
+        }
+    });
+    ```
+
 ## Development
 
 1. git clone
@@ -59,18 +71,17 @@ This project generates the JavaScript you will include on the page into which yo
 
 `npm run build` will create a production build in the `dist` folder.
 
-
 ## TODO
 
-- [x] Make widget position fixed on page - &yet
-- [x] Make widget position configurable - &yet
-- [x] Add emoji animation on click and on receiving an event - &yet
-- [x] Apply styling to widget, buttons, counts, etc. - &yet
-- [ ] Consider incrementing displayed count **on click** instead of waiting for SSE. Network delay may delay count increment after a click and confuse the user -- they will click and not see the number increment right away.
-- [ ] Determine a better way to make widget JS available to event organizer. Right now they have to copy the `dist/main.js` file to their event website and serve it from that website.
-- [ ] Add tests for components
-- [x] Make counters work
-- [x] Periodically update counts
-- [x] Make API URL configurable
-- [x] Handle update of `talk-id` attribute
-- [x] Remove old / unnecessary components (greeting, hero, app)
+-   [x] Make widget position fixed on page - &yet
+-   [x] Make widget position configurable - &yet
+-   [x] Add emoji animation on click and on receiving an event - &yet
+-   [x] Apply styling to widget, buttons, counts, etc. - &yet
+-   [ ] Consider incrementing displayed count **on click** instead of waiting for SSE. Network delay may delay count increment after a click and confuse the user -- they will click and not see the number increment right away.
+-   [ ] Determine a better way to make widget JS available to event organizer. Right now they have to copy the `dist/main.js` file to their event website and serve it from that website.
+-   [ ] Add tests for components
+-   [x] Make counters work
+-   [x] Periodically update counts
+-   [x] Make API URL configurable
+-   [x] Handle update of `talk-id` attribute
+-   [x] Remove old / unnecessary components (greeting, hero, app)
