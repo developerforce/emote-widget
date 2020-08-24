@@ -90,6 +90,7 @@ a.text-link {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    position: relative;
 
     &:after {
         width: 50px;
