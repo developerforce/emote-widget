@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <div class="speech-bubble">
+        <div class="speech-bubble" if:true={showBubble}>
             <template if:true={showWidget}>
                 <h1>Share how you feel!</h1>
                 <div class="buttons">
@@ -21,10 +21,15 @@
                 <h1>Options</h1>
                 <form>
                     <label for="animations">Animations</label>
-                    <select id="animations">
-                        <option>On</option>
-                        <option>Low</option>
-                        <option>Off</option>
+                    <select id="animations" onchange={selectOption}>
+                        <template if:true={showAnimations}>
+                            <option value="true" selected>On</option>
+                            <option value="false">Off</option>
+                        </template>
+                        <template if:false={showAnimations}>
+                            <option value="true">On</option>
+                            <option value="false" selected>Off</option>
+                        </template>
                     </select>
                     <div class="form-buttons">
                         <a href="#" class="text-link" onclick={closeOptions}
@@ -37,7 +42,7 @@
                 </form>
             </template>
         </div>
-        <div class="activator"onclick={toggleWidget}>
+        <div class="activator" onclick={toggleWidget}>
             <canvas class="animation-canvas" lwc:dom="manual"></canvas>
         </div>
     </div>
