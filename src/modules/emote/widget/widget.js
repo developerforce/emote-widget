@@ -7,6 +7,7 @@ const { apiDomain, ssePath, emotePath } = config;
 export default class Widget extends LightningElement {
     eventSource;
     eventList;
+    emoteCallback;
     intervalId;
     talk;
     showWidget = true;
@@ -78,7 +79,7 @@ export default class Widget extends LightningElement {
         // Increment displayed count when SSE received
         this.eventSource.addEventListener(
             'emote',
-            this.incrementButtonCount.bind(this)
+            this.emoteReceived.bind(this)
         );
 
         // Update displayed count periodically from server
@@ -100,19 +101,24 @@ export default class Widget extends LightningElement {
 
         this.eventSource.removeEventListener(
             'emote',
-            this.incrementButtonCount.bind(this)
+            this.emoteReceived.bind(this)
         );
         this.eventSource.close();
         this.animation = false;
     }
 
-    // For each button, increment its count if its name matches the string in the event
-    incrementButtonCount(event) {
+    emoteReceived(event) {
         // If animations are enabled, trigger an animation
         if (this.showAnimations) {
             this.animation.fireAnimation(event.data);
         }
 
+        // If a listener is added then trigger it
+        if (typeof this.emoteCallback === 'function') {
+            this.emoteCallback(event);
+        }
+
+        // For each button, increment its count if its name matches the string in the event
         this.buttonsData.forEach((button) => {
             if (button.name === event.data) {
                 button.count = parseInt(button.count, 10) + 1;
@@ -141,6 +147,11 @@ export default class Widget extends LightningElement {
                 button.count = 0;
             }
         });
+    }
+
+    @api
+    onEmote(callback) {
+        this.emoteCallback = callback;
     }
 
     // Control bubble visibility
