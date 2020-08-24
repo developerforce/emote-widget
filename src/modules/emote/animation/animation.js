@@ -20,10 +20,6 @@ const calculateAlpha = (yCurrent, yStart, yEnd) => {
     return alpha < 0 ? 0 : alpha;
 };
 
-const renderParticule = (anim) => {
-    anim.animatables.forEach((i) => i.target.draw());
-};
-
 export default class Animation {
     canvasEl;
     ctx;
@@ -97,6 +93,10 @@ export default class Animation {
         return p;
     }
 
+    renderParticule(anim) {
+        anim.animatables.forEach((i) => i.target.draw());
+    }
+
     animateParticules(img) {
         const particules = [this.createParticule(img)];
 
@@ -107,7 +107,7 @@ export default class Animation {
             radius: anime.random(10, 80),
             duration: anime.random(12000, 15000),
             easing: 'easeOutExpo',
-            update: renderParticule
+            update: this.renderParticule
         });
     }
 
