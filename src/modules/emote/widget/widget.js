@@ -35,6 +35,11 @@ export default class Widget extends LightningElement {
             count: '0'
         },
         {
+            name: 'clap',
+            emoji: '👏',
+            count: '0'
+        },
+        {
             name: 'plusone',
             emoji: '👍',
             count: '0'
