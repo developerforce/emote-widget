@@ -89,6 +89,7 @@ a.text-link {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 
     &:after {
         width: 50px;
