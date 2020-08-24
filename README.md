@@ -16,7 +16,16 @@ This project generates the JavaScript you will include on the page into which yo
     `<emote-widget talk-id="mytalk" position="bottom-right"></emote-widget>`
 
     1. The `talk-id` value `mytalk` is a unique string identifier for the current talk. You'll need to update this when the talk changes. See the next step for more details.
-    1. The `position` value `bottom-right` determines where the widget is shown on the page. It's value must be one of `bottom-right`, `top-right`, or `middle-right`.
+    1. Colors, fonts, and positioning can be configured in `widget.scss`
+    1. Set `widget-side` to `right` or `left` in `widget.scss`
+    2. Add absolute positioning to your site's CSS to adjust were it appears.
+    ```
+    emote-widget {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+    ```
 
 1. Write some JavaScript to update the `talk-id` attribute's value when the talk changes. This will reset the counters to zero and record future clicks toward the new `talk-id` value. The `talk-id` value can be any string, but make sure it's unique for each "segment" (e.g. talk, panel discussion) of your event for which you want to uniquely capture emote events. Something like the following can be used, but you'll have to implement a way to invoke the function when the talk changes.
 
