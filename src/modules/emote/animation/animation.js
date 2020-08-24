@@ -67,8 +67,8 @@ export default class Animation {
     }
 
     setParticuleDirection(p) {
-        var angle = 1.55;
-        var radius = -this.canvasRect.height;
+        const angle = 1.55;
+        const radius = -this.canvasRect.height;
         return {
             x: p.x + radius * Math.cos(angle),
             y: p.y + radius * Math.sin(angle)
