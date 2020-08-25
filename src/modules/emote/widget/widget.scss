@@ -1,13 +1,10 @@
-@font-face {
-    font-family: 'Nunito';
-    src: url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
-}
 $widget-color: #17c37b;
 $widget-text-color: #4a4a4a;
 $widget-link-color: #4a4a4a;
 $widget-numbers-color: #4a4a4a;
 $widget-side: right;
 $widget-font-family: 'Nunito', sans-serif;
+$mobile-size: 700px;
 
 .container {
     display: flex;
@@ -18,11 +15,11 @@ $widget-font-family: 'Nunito', sans-serif;
 
     @if $widget-side == right {
         align-items: flex-end;
-        margin: 0 2em 2em 0;
+        padding: 0 2em 2em 0;
     }
 
     @if $widget-side == left {
-        margin: 0 0 2em 2em;
+        padding: 0 0 2em 2em;
     }
 }
 
@@ -36,10 +33,23 @@ $widget-font-family: 'Nunito', sans-serif;
     box-shadow: 0 0 50px 0 rgba(10, 6, 27, 0.22);
     flex: 1;
     padding: 1em;
-    width: 100%;
     border-radius: 15px;
     border-top: 10px solid $widget-color;
     position: relative;
+    display: flex;
+    flex-direction: column;
+
+    @if $widget-side == right {
+        margin-left: 2em;
+    }
+
+    @if $widget-side == left {
+        margin-right: 2em;
+    }
+
+    @media only screen and (min-width: $mobile-size) {
+        margin: 0;
+    }
 
     &:after {
         display: block;
@@ -64,10 +74,11 @@ h1 {
 .buttons {
     display: flex;
     align-content: center;
-    justify-content: space-evenly;
+    justify-content: center;
     width: 100%;
     text-align: center;
     padding: 1em 0;
+    flex-wrap: wrap;
 }
 
 a.text-link {
@@ -137,4 +148,4 @@ select {
     right: -2em;
     z-index: 1;
     pointer-events: none;
-  }
+}
