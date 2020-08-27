@@ -12,6 +12,13 @@ export default class Button extends LightningElement {
     @api talkId = 'unknown';
     @api count = 0;
 
+    get formattedCount() {
+        let int = +this.count;
+        return int < 1000
+            ? int
+            : `${(int / 1000).toFixed(1)}k`.replace('.0k', 'k');
+    }
+
     // On button click, POST message to API server
     handleClick() {
         fetch(`${apiDomain}${emotePath}/${this.talkId}`, {
