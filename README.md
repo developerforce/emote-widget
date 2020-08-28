@@ -27,9 +27,10 @@ This project generates the JavaScript you will include on the page into which yo
 
 1. Add the `<emote-widget>` HTML element within the `<body>` of the page. It doesn't matter where within the body you put it. It will be absolutely positioned using CSS.
 
-    `<emote-widget talk-id="mytalk" position="bottom-right"></emote-widget>`
+    `<emote-widget talk-id="mytalk" open="true"></emote-widget>`
 
     1. The `talk-id` value `mytalk` is a unique string identifier for the current talk. You'll need to update this when the talk changes. See the next step for more details.
+    1. Set `open` to `false` if you want to start your Widget closed
     1. Colors, fonts, and positioning can be configured in `widget.scss`
     1. Set `widget-side` to `right` or `left` in `widget.scss`
     1. Add absolute positioning to your site's CSS to adjust were it appears.
