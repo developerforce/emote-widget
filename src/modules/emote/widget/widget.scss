@@ -91,6 +91,22 @@ a.text-link {
     }
 }
 
+.bottom-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    aside a {
+        font-size: 13px;
+        opacity: .5;
+        transition: all .4s;
+
+        &:hover, &:focus {
+            opacity: 1;
+        }
+    }
+}
+
 .activator {
     width: 80px;
     height: 80px;

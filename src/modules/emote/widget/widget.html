@@ -14,7 +14,21 @@
                         ></emote-button>
                     </template>
                 </div>
-                <a href="#" class="text-link" onclick={openOptions}>options</a>
+                <div class="bottom-section">
+                    <a href="#" class="text-link" onclick={openOptions}
+                        >options</a
+                    >
+                    <aside>
+                        <a
+                            href="https://heroku.com"
+                            class="text-link"
+                            target="_blank"
+                            aria-label="Brought to you with 💜 by Heroku (Opens in new window)"
+                        >
+                            Brought to you with 💜 by Heroku</a
+                        >
+                    </aside>
+                </div>
             </template>
 
             <template if:true={showOptions}>
