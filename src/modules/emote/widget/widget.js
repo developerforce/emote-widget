@@ -65,6 +65,15 @@ export default class Widget extends LightningElement {
         return this.talk;
     }
 
+    @api
+    get open() {
+        return this.showWidget;
+    }
+
+    set open(value) {
+        this.showWidget = value === 'true';
+    }
+
     // Handle when the value of the "talk-id" attribute is set (or updated)
     set talkId(value) {
         this.talk = value;
