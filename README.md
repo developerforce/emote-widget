@@ -120,4 +120,4 @@ Please review and adhere to our [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) when in
 
 ## 📝 License
 
-This project is licensed under the Creative Commons Zero v1.0 License. See the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the Creative Commons Zero v1.0 License. See the [LICENSE](LICENSE) file for details.
