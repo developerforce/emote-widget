@@ -115,14 +115,11 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
-<<<<<<< HEAD
 
 ## Code of Conduct
 
-Please review and adhere to our [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) when interacting with this project in any way.
+Please review and adhere to our [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) before contributing to this project in any way (e.g. creating an issue, writing code, etc).
 
 ## 📝 License
 
-# This project is licensed under the Creative Commons Zero v1.0 License. See the [LICENSE](LICENSE) file for details.
-
-> > > > > > > b41841c... Contrib guidelines update
+This project is licensed under the Creative Commons Zero v1.0 License. See the [LICENSE](LICENSE) file for details.
