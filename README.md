@@ -1,9 +1,7 @@
 # Emote Widget
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
-
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 To emote | əˈmōt | is to display emotions openly, especially while acting. But the word also has a meaning in internet history. The original internet chat tool, IRC, provided a `/me` command, which allowed IRC channel participants to share emotion.
@@ -106,12 +104,12 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://github.com/DianaPerkinsDesign"><img src="https://avatars0.githubusercontent.com/u/3477197?v=4" width="100px;" alt=""/><br /><sub><b>Diana Perkins</b></sub></a><br /><a href="#design-DianaPerkinsDesign" title="Design">🎨</a> <a href="https://github.com/fostive/emote-widget/commits?author=DianaPerkinsDesign" title="Code">💻</a> <a href="#ideas-DianaPerkinsDesign" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://crc.io"><img src="https://avatars3.githubusercontent.com/u/275734?v=4" width="100px;" alt=""/><br /><sub><b>Chris Castle</b></sub></a><br /><a href="https://github.com/fostive/emote-widget/commits?author=crcastle" title="Code">💻</a> <a href="https://github.com/fostive/emote-widget/commits?author=crcastle" title="Documentation">📖</a> <a href="#ideas-crcastle" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
 </table>
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
-
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
