@@ -26,6 +26,15 @@
         "doc",
         "ideas"
       ]
+    },
+    {
+      "login": "clif-os",
+      "name": "Clifton Campbell",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/13678764?v=4",
+      "profile": "https://clif.world",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
