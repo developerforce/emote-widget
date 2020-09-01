@@ -92,13 +92,13 @@ The 3rd-person `* friendlybug75 jumps for joy` is an emote.
 
 We love contributions, small or big, from others!
 
-Please see our [CONTRIBUTING](CONTRIBUTING.md) guidelines. The first thing to do is to discuss the change you wish to make via issue, email, or any other method with the owners of this repository.
+## Contributing ✨
 
-Also, please review our [code of conduct](CODE_OF_CONDUCT.md). Please adhere to it in all your interactions with this project.
+Please see our [CONTRIBUTING](https://github.com/fostive/.github/blob/main/CONTRIBUTING.md) guidelines. The first thing to do is to discuss the change you wish to make via issue, email, or any other method with the owners of this repository.
 
-## ✨ Contributors
+Also, please review our [code of conduct](https://github.com/fostive/.github/blob/main/CODE_OF_CONDUCT.md). Please adhere to it in all your interactions with this project.
 
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)) for contributing to the project:
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
@@ -115,6 +115,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+<<<<<<< HEAD
 
 ## Code of Conduct
 
@@ -122,4 +123,6 @@ Please review and adhere to our [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) when in
 
 ## 📝 License
 
-This project is licensed under the Creative Commons Zero v1.0 License. See the [LICENSE](LICENSE) file for details.
+# This project is licensed under the Creative Commons Zero v1.0 License. See the [LICENSE](LICENSE) file for details.
+
+> > > > > > > b41841c... Contrib guidelines update
