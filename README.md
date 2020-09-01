@@ -90,9 +90,11 @@ The 3rd-person `* friendlybug75 jumps for joy` is an emote.
 
 ## 🤝 Contributing
 
-When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other method with the owners of this repository before making a change.
+We love contributions, small or big, from others!
 
-Please note we have a code of conduct, please follow it in all your interactions with the project.
+Please see our [CONTRIBUTING](CONTRIBUTING.md) guidelines. The first thing to do is to discuss the change you wish to make via issue, email, or any other method with the owners of this repository.
+
+Also, please review our [code of conduct](CODE_OF_CONDUCT.md). Please adhere to it in all your interactions with this project.
 
 ## ✨ Contributors
 
