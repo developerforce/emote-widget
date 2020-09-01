@@ -118,7 +118,7 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 
 ## Code of Conduct
 
-Please review and adhere to our [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) before contributing to this project in any way (e.g. creating an issue, writing code, etc).
+Please review and adhere to our [CODE_OF_CONDUCT.md](https://github.com/fostive/.github/blob/main/CODE_OF_CONDUCT.md) before contributing to this project in any way (e.g. creating an issue, writing code, etc).
 
 ## 📝 License
 
