@@ -1,7 +1,9 @@
 # Emote Widget
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+
 [![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 To emote | əˈmōt | is to display emotions openly, especially while acting. But the word also has a meaning in internet history. The original internet chat tool, IRC, provided a `/me` command, which allowed IRC channel participants to share emotion.
@@ -81,6 +83,16 @@ The 3rd-person `* friendlybug75 jumps for joy` is an emote.
     });
     ```
 
+## Customizing
+
+Changing the emojis:
+
+1. Create and export your new emoji in svg format. Ours are square, 47px x 47px.
+
+1. Use a base64 converter on each new emoji. We used https://www.base64-image.de/ .
+
+1. Copy the css the converter outputs into `button.scss` under the corresponding class.
+
 ## 🛠 Built With
 
 -   [Lightning Web Components](https://lwc.dev) to build the Web Components
@@ -111,6 +123,7 @@ Thanks goes to these wonderful ✨ people ([emoji key](https://allcontributors.o
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
