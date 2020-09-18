@@ -89,7 +89,7 @@ Changing the emojis:
 
 1. Create and export your new emoji in svg format. Ours are square, 47px x 47px.
 
-1. Use a base64 converter on each new emoji. We used https://www.base64-image.de/ .
+1. Use a base64 converter on each new emoji. We used https://www.base64-image.de/
 
 1. Copy the css the converter outputs into `button.scss` and `animation.js` under the corresponding classes.
 
