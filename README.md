@@ -91,7 +91,7 @@ Changing the emojis:
 
 1. Use a base64 converter on each new emoji. We used https://www.base64-image.de/ .
 
-1. Copy the css the converter outputs into `button.scss` under the corresponding class.
+1. Copy the css the converter outputs into `button.scss` and `animation.js` under the corresponding classes.
 
 ## 🛠 Built With
 
