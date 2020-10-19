@@ -86,14 +86,6 @@ module.exports = (format = 'esm') => {
             file: path.join(outputDir, 'main.js'),
             format: 'esm'
         },
-        manualChunks(id) {
-            if (id.includes('lwc')) {
-                return ['lwc'];
-            } else if (id.includes('node_modules')) {
-                return ['vendor'];
-            }
-            return 'common';
-        },
         plugins: [
             removeTypesPlugin(),
             nodeResolve({
