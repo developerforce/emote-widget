@@ -18,7 +18,7 @@
         "globby": "^11.0.1",
         "husky": "^4.2.5",
         "lint-staged": "^10.2.11",
-        "lwc-services": "^2.1.4",
+        "lwc-services": "^2.2.2",
         "node-sass": "^4.14.1",
         "npm-run-all": "^4.1.5",
         "prettier": "^2.0.5"
